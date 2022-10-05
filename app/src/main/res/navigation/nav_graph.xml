@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loadingFragment">
+
+    <fragment
+        android:id="@+id/loadingFragment"
+        android:name="com.stanleyhks.b.fragments.LoadingFragment"
+        android:label="LoadingFragment" >
+        <action
+            android:id="@+id/action_loadingFragment_to_webFragment"
+            app:destination="@id/webFragment" />
+        <action
+            android:id="@+id/action_loadingFragment_to_startGameFragment"
+            app:destination="@id/startGameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/startGameFragment"
+        android:name="com.stanleyhks.b.ui.fragments.StartGameFragment"
+        android:label="StartGameFragment" />
+    <fragment
+        android:id="@+id/victoryFragment"
+        android:name="com.stanleyhks.b.ui.fragments.VictoryFragment"
+        android:label="VictoryFragment" >
+        <action
+            android:id="@+id/action_victoryFragment_to_startGameFragment"
+            app:destination="@id/startGameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/webFragment"
+        android:name="com.stanleyhks.b.ui.fragments.WebFragment"
+        android:label="WebFragment" >
+        <action
+            android:id="@+id/action_webFragment_to_startGameFragment"
+            app:destination="@id/startGameFragment" />
+    </fragment>
+</navigation>

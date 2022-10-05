@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Funny Joker</string>
+
+    <string name="facebook_app_id">767729854514263</string>
+    <string name="facebook_client_token">53ce747796c5fdb1b4ff1da174607dcb</string>
+
+    <string name="onesignal_id">bbffd601-ddef-400a-bc85-57221045874b</string>
+    <string name="apps_dev_key">4G8pg8B8RjsDQK2EqFXDga</string>
+    <string name="base_url">https://funnyjoker.world/funnyjoker.php</string>
+
+    <string name="secure_get_parametr">1E1QjrgH1T</string>
+    <string name="secure_key">5p1MDjgxFC</string>
+    <string name="dev_tmz_key">QEc7BjoUvm</string>
+    <string name="adb_key">oApsaXM8TR</string>
+    <string name="referrer_key">gRmXq3TfJc</string>
+    <string name="gadid_key">U0bYjbAVOY</string>
+    <string name="deeplink_key">PHucXowI8N</string>
+    <string name="source_key">Nj6HsN4xwM</string>
+    <string name="af_id_key">y5VfqjCAL0</string>
+    <string name="adset_id_key">2Y28kJ2A92</string>
+    <string name="campaign_id_key">kdwyNbCv9R</string>
+    <string name="app_campaign_key">USWEV4F9OF</string>
+    <string name="adset_key">Ue94p4IQeU</string>
+    <string name="adgroup_key">vxTxVZKUk1</string>
+    <string name="orig_cost_key">HtOEL7xRbu</string>
+    <string name="af_siteid_key">ZnDuzH9Mkp</string>
+
+    <string name="start_button_text">Start</string>
+    <string name="start_game_text">Press to start a game</string>
+    <string name="game_text">Guess where is cherry</string>
+    <string name="victory_text">You won, try again?</string>
+    <string name="victory_btn_text">Try again</string>
+    <string name="tries_text">You have 3 tries</string>
+</resources>
