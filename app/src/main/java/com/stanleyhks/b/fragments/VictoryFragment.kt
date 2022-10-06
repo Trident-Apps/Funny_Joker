@@ -1,4 +1,4 @@
-package com.stanleyhks.b.ui.fragments
+package com.stanleyhks.b.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater

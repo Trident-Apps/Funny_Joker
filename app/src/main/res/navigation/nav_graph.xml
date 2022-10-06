@@ -17,11 +17,11 @@
     </fragment>
     <fragment
         android:id="@+id/startGameFragment"
-        android:name="com.stanleyhks.b.ui.fragments.StartGameFragment"
+        android:name="com.stanleyhks.b.fragments.StartGameFragment"
         android:label="StartGameFragment" />
     <fragment
         android:id="@+id/victoryFragment"
-        android:name="com.stanleyhks.b.ui.fragments.VictoryFragment"
+        android:name="com.stanleyhks.b.fragments.VictoryFragment"
         android:label="VictoryFragment" >
         <action
             android:id="@+id/action_victoryFragment_to_startGameFragment"
@@ -29,7 +29,7 @@
     </fragment>
     <fragment
         android:id="@+id/webFragment"
-        android:name="com.stanleyhks.b.ui.fragments.WebFragment"
+        android:name="com.stanleyhks.b.fragments.WebFragment"
         android:label="WebFragment" >
         <action
             android:id="@+id/action_webFragment_to_startGameFragment"

@@ -1,7 +1,5 @@
-package com.stanleyhks.b.ui.fragments
+package com.stanleyhks.b.fragments
 
-import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
