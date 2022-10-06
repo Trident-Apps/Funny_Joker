@@ -7,5 +7,6 @@ import androidx.room.PrimaryKey
 data class UrlEntity(
     @PrimaryKey(autoGenerate = true) var uId: Int = 0,
     var url: String? = null,
-    var adbStatus: String? = null
+    var adbStatus: String? = null,
+    var appsStatus: Boolean
 )

@@ -13,6 +13,7 @@ import com.appsflyer.AppsFlyerConversionListener
 import com.appsflyer.AppsFlyerLib
 import com.facebook.applinks.AppLinkData
 import com.onesignal.OneSignal
+import com.stanleyhks.b.JokerApplication
 import com.stanleyhks.b.R
 import com.stanleyhks.b.model.UrlEntity
 import com.stanleyhks.b.repository.JokerRepository
@@ -20,7 +21,7 @@ import com.stanleyhks.b.util.UriBuilder
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class JokerViewModel(val rep: JokerRepository, application: Application) :
+class JokerViewModel(private val rep: JokerRepository, application: Application) :
     AndroidViewModel(application) {
 
     val urlEntity = rep.urlEntity
@@ -34,11 +35,22 @@ class JokerViewModel(val rep: JokerRepository, application: Application) :
         AppLinkData.fetchDeferredAppLinkData(activity) {
             when (it?.targetUri.toString()) {
                 "null" -> {
-                    startApps(activity!!)
-
+                    viewModelScope.launch {
+                        Log.d("customTag", "apps status ${urlEntity?.appsStatus.toString()}")
+                        if (urlEntity?.appsStatus == null) {
+                            startApps(activity!!)
+                            Log.d("customTAGSPECISAL", "apps invocation")
+                        }
+                    }
                 }
                 else -> {
-                    url.postValue(builder.buildUrl(it?.targetUri.toString(), null, activity))
+                    url.postValue(
+                        builder.buildUrl(
+                            it?.targetUri.toString(),
+                            null,
+                            activity!!,
+                        )
+                    )
                     sendTag(it?.targetUri.toString(), null)
                 }
             }

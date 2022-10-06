@@ -143,7 +143,13 @@ class WebFragment : Fragment() {
                     if (url == BASE_URL) {
                         findNavController().navigate(R.id.startGameFragment)
                     } else {
-                        viewModel.saveUrl(UrlEntity(url = url, adbStatus = adbString))
+                        viewModel.saveUrl(
+                            UrlEntity(
+                                url = url,
+                                adbStatus = adbString,
+                                appsStatus = true
+                            )
+                        )
                     }
                 }
             }
@@ -171,13 +177,19 @@ class WebFragment : Fragment() {
     private fun adbCheck(activity: Activity) {
         adbString = viewModel.checkADB(activity) ?: "null"
         if (viewModel.urlEntity?.adbStatus == null) {
-            if (adbString == "1") {
-                viewModel.saveUrl(UrlEntity(url = "adb check fail", adbStatus = "1"))
+            if (adbString != "1") {
+                viewModel.saveUrl(
+                    UrlEntity(
+                        url = "adb check fail",
+                        adbStatus = "1",
+                        appsStatus = true
+                    )
+                )
                 findNavController().navigate(R.id.startGameFragment)
                 Log.d("MYTAG", "started cloak from new adb check")
             }
         } else {
-            if (viewModel.urlEntity!!.adbStatus == "1") {
+            if (viewModel.urlEntity!!.adbStatus != "1") {
                 findNavController().navigate(R.id.startGameFragment)
                 Log.d("MYTAG", "started cloak from saved adb check")
             }

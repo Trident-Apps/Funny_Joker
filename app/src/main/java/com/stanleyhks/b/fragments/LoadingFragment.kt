@@ -35,8 +35,8 @@ class LoadingFragment : Fragment(R.layout.loading_fragment) {
             val savedUrl = viewModel.urlEntity?.url
             Log.d("customTag", "saved url is $savedUrl")
             if (savedUrl == null) {
-                viewModel.getDeepLink(requireActivity())
-                Log.d("customTag", "started apps")
+                    viewModel.getDeepLink(requireActivity())
+                    Log.d("customTag", "started apps")
 
                 lifecycleScope.launch(Dispatchers.Main) {
                     viewModel.urlLiveData.observe(viewLifecycleOwner) {
